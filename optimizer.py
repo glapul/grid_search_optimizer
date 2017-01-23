@@ -14,9 +14,7 @@ def optimize(f, parameter_ranges, buckets=6, retries=4):
             vec.append(pos)
             converted_vec.append(begins[j] + pos*steps[j])
             tmp /= buckets
-        print converted_vec
         res = f(converted_vec)
-        print res
         if res < minres:
             minres = res
             wh = vec
